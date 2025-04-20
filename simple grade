@@ -1,0 +1,30 @@
+ 
+
+def calculate_percentage():
+    """Prompt for points earned and total possible, 
+    then return the percentage score."""
+    earned = float(input("Points earned: "))
+    total  = float(input("Total possible points: "))
+    return (earned / total) * 100
+
+def print_letter_grade(percent):
+    """Print the letter grade corresponding to percent."""
+    if percent >= 90:
+        grade = "A"
+    elif percent >= 80:
+        grade = "B"
+    elif percent >= 70:
+        grade = "C"
+    elif percent >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+    print(f"Your letter grade is {grade}.")
+
+def main():
+    pct = calculate_percentage()
+    print(f"You scored {pct:.2f}%")
+    print_letter_grade(pct)
+
+if __name__ == "__main__":
+    main()
